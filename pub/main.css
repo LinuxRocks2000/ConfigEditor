@@ -1,0 +1,109 @@
+#main{
+    display: grid;
+    grid-template-columns: 32% 32% 32%;
+    column-gap: 1vw;
+    row-gap: 1vw;
+    margin-left: 1.5vw;
+    grid-auto-flow: row dense;
+    align-items: flex-start;
+}
+
+*{
+    padding: 0px;
+    margin: 0px;
+}
+
+body{
+    background-color: black;
+}
+
+.entry, .category{
+    background-color: #EEEEEE;
+    border-radius: 20px;
+    padding: 10px;
+    box-sizing: border-box;
+    text-align: center;
+    align-self: start;
+    margin-top: auto;
+    margin-bottom: auto;
+}
+
+.category{
+    background-color: black;
+    margin-top: 0;
+    margin-bottom: 0;
+    padding: 0;
+}
+
+.cat-name{
+    font-family: fantasy;
+    font-size: 1.5em;
+    color: white;
+}
+
+.file{
+    font-family: monospace;
+    color: green;
+    text-align: left;
+}
+
+.type{
+    background-color: grey;
+    font-family: monospace;
+}
+
+.name{
+    font-family: monospace;
+    margin-left: auto;
+    margin-right: auto;
+    display: inline-block;
+    color: white;
+    background-color: black;
+}
+
+.content{
+    text-align: left;
+}
+
+input{
+    width: 100%;
+}
+
+.boolInput{
+    display: none;
+}
+
+.boolInput + label{
+    width: 50px;
+    height: 25px;
+    border-radius: 12.5px;
+    display: inline-block;
+    background-color: red;
+    position: relative;
+    left: 50%;
+    transform: translate(-50%, 0);
+}
+
+.boolInput + label::after{
+    width: 25px;
+    height: 25px;
+    background-color: grey;
+    content: "";
+    display: inline-block;
+    border-radius: 12.5px;
+    transition: margin-left 0.5s, background-color 0.5s;
+    margin-left: 0px;
+}
+
+.boolInput:checked + label{
+    background-color: green;
+}
+
+.boolInput:checked + label::after{
+    margin-left: 25px;
+}
+
+body > h1, body > p{
+    text-align: center;
+    color: white;
+}
